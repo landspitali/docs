@@ -1,0 +1,12 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+header a.button {
+    height: fit-content;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-image: none;
+    padding: 20px;
+}
