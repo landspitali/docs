@@ -12,6 +12,7 @@ ekki virka með PuTTY. Ef þú vil PuTTY þá getur þú skoðað það [hér]({
   * [Að búa til lyklaparið](#að-búa-til-lyklaparið)
   * [Að nota lyklaparið](#að-nota-lyklaparið)
 2. [Aðeins minna einfalda leiðin](#aðeins-minna-einfalda-leiðin)
+3. [SSH Vandamál](#ssh-vandamál)
 
 ## Einfalda leiðin
 
@@ -83,3 +84,35 @@ lykla og færð neitun eftir að hafa reynt á X marga lykla þá geturu sagt SS
 ssh <einhver.þjónn> -i /MAPPA/MEÐ/LYKLI/lykill
 ```
 Og þú ættir að komast inn
+
+
+## SSH Vandamál
+
+Ef þú lendir í veseni með að tengjast með SSH þá er góð leið að bæta við -v fyrir aftan ssh til þess að fá frekari upplýsingar, ef þú ert í vandræðum með að tenjast og þarft að hringja í vin þá mælum við með að senda þessar upplýsingar með.
+
+
+```
+# ssh -v banani@204.220.0.1
+debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password
+debug1: Next authentication method: gssapi-with-mic
+debug1: No credentials were supplied, or the credentials were unavailable or inaccessible
+No Kerberos credentials available (default cache: KCM:)
+debug1: No credentials were supplied, or the credentials were unavailable or inaccessible
+No Kerberos credentials available (default cache: KCM:)
+debug1: Next authentication method: publickey
+debug1: Offering public key: /home/banani/.ssh/id_rsa RSA SHA256:asdfasdfasdfadsf agent
+debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password
+debug1: Offering public key: /home/banani/.ssh/id_ed25519 ED25519 SHA256:ahfd371asgfasdf agent
+debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password
+debug1: Offering public key: /home/banani/.ssh/id_git_rsa RSA SHA256:37uyadsgahdfhad agent
+debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password
+debug1: Offering public key: banani RSA SHA256:asdh1347yasdgasdg agent
+debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password
+debug1: Trying private key: /home/banani/.ssh/id_ecdsa
+debug1: Trying private key: /home/banani/.ssh/id_ecdsa_sk
+debug1: Trying private key: /home/banani/.ssh/id_ed25519_sk
+debug1: Trying private key: /home/banani/.ssh/id_xmss
+debug1: Trying private key: /home/banani/.ssh/id_dsa
+debug1: Next authentication method: password
+banani@204.220.0.1's password: 
+```
