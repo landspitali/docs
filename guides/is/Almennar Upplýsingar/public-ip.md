@@ -1,8 +1,8 @@
 ---
-title: 'Public IP tala'
+title: 'Ytri IP tala (Public IP)'
 ---
 
-# Public IP tala
+# Ytri IP tala (Public IP)
 
 Ytri IP tala er IP talan sem er notuð þegar talað er yfir internetið.
 
